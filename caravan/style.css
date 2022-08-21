@@ -5,23 +5,12 @@
   box-sizing: border-box;
 }
 
-.header {
-  width: 100%; /* 横幅いっぱい */
-  height: 120px; /* 高さ120px */
-  background-color: red; /* 背景色red */
+header {
+  width: 90%; /* 横幅90% */
+  padding: 15px 0;
+  margin: 0 auto;
 }
 
-.header-top {
-  width: 100%; /* 横幅いっぱい */
-  height: 70px; /* 高さ100px */
-  background-color: hotpink; /* 背景色hotpink */
-}
-
-.header-bottom {
-  width: 100%; /* 横幅いっぱい */
-  height: 50px; /* 高さ100px */
-  background-color: pink; /* 背景色pink */
-}
 .main-visual {
   width: 100%; /* 横幅いっぱい */
   height: 300px; /* 高さ300px */
@@ -56,8 +45,7 @@
   background-color: palegreen; /* 背景色palegreen */
 }
 
-.footer {
+footer {
   width: 100%; /* 横幅いっぱい */
   height: 120px; /* 高さ120px */
-  background-color: blue; /* 背景色blue */
 }
