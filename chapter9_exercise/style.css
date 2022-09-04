@@ -23,9 +23,6 @@ main {
   background-color: #eee;
 }
 
-.step-box:last-child {
-  margin-right: 0;
-}
 
 .step-img1 {
   height: 150px;
@@ -64,3 +61,50 @@ footer {
   height: 50px;
   background-color: #aaa;
 }
+
+/* タブレット縦置きサイズ（768px）以下の際に適用される設定 */
+@media screen and (max-width:768px) {
+  header {
+    width: 100%;
+    height: 50px;
+    padding-bottom: 50px;
+  }
+  main {
+    width: 100%;
+    display: block;
+  }
+  .step-box {
+  width: 90%;
+  padding: 20px;
+
+  margin:0 auto; /* 中央寄せ（左右に余白がないとできない） */
+  margin-top: 20px;
+  }
+
+  .step-box:last-child{
+    margin-bottom: 50px;
+  }
+}
+
+.step-img1 {
+
+  height: 150px;
+}
+
+.step-img2 {
+
+  height: 150px;
+}
+
+.step-img3 {
+
+  height: 150px;
+}
+
+footer {
+  width: 100%;
+  height: 50px;
+  padding-top: 50px;
+}
+
+

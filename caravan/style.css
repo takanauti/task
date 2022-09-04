@@ -10,27 +10,27 @@ a {
   text-decoration: none;
 }
 
-header,nav,h2,main-visual,footer{
-  font-family: Chalkduster,"Bradley Hand",Courier,"Segoe Print",sans-serif;
+header, nav, h2, .main-visual, footer {
+  font-family: Chalkduster, "Bradley Hand", Courier, "Segoe Print", sans-serif;
 }
 
 header {
-  width: 90%; /* 横幅90% */
+  width: 90%; /* 横幅 */
   padding: 15px 0;
   margin: 0 auto;
   text-align: center;
   position: relative;
 }
 
-.social {
-  position: absolute; /* headerの左上を基準に絶対位置で指定する */
-  top: 22px; /* headerの左上から22px下側へ移動する */
-  right: 22px; /* headerの右上から22px左側へ移動する */
-}
-
 .social i {
   display: inline-block;
   margin-left: 20px;
+}
+
+.social {
+  position: absolute;
+  top: 22px;
+  right: 22px;
 }
 
 header .heading {
@@ -75,61 +75,61 @@ header .heading {
   color: #fff; /* 文字色を白に変更 */
 }
 
-main{
-  width:800px;
-  display: flex;
-  justify-content:center;
-  margin:0 auto;
-  padding:70px 0;
+main {
+  width: 800px; /* 横幅800px */
+  display: flex; /* Flexboxの利用 */
+  justify-content: center; /* 要素の横並び・中央寄せ */
+  margin: 0 auto; /* 要素の中央揃え */
+  padding: 70px 0; /* 上下に70px、左右に0pxの内側余白 */
 }
 
 .blog {
-  width:540px;
-  margin-right: 30px;
+  width: 540px;
+  margin-right: 30px; /* 領域の右側余白 */
 }
 
-.blog-heading{
-  border-bottom: 8px solid#f7f7f7;
+.blog-heading {
+  border-bottom: 8px solid #f7f7f7;
   text-align: center;
   line-height: 0.6;
 }
 
-.blog-box{
+.blog-box {
   padding-top: 50px;
 }
 
-.blog-item{
+.blog-item {
   padding-bottom: 20px;
   margin-bottom: 20px;
   border-bottom: 1px solid #f7f7f7;
   display: flex;
-  justify-content:flex-start;
+  justify-content: flex-start;
 }
 
-.blog-image{
+.blog-image {
   height: 180px;
 }
 
-.blog-text{
+.blog-text {
   padding: 25px 0 0 30px;
 }
 
-.blog-text-heading{
+.blog-text-heading {
   padding-bottom: 15px;
 }
 
-.blog-date{
+.blog-date {
   font-size: 12px;
   display: inline-block;
 }
 
-.category{
+.category {
   display: inline-block;
   padding: 5px 8px;
   background-color: #acabab;
-  border-radius: 30px;
-  color:#fff;
-  font-size:11px;
+  border-radius: 3px;
+  color: #fff;
+  font-size: 11px;
 }
 
 .pagination {
@@ -147,25 +147,26 @@ main{
   border-radius: 3px;
   line-height: 30px;
 }
+
 .sidebar {
   width: 230px;
 }
 
-.common-heading{
+.common-heading {
   border-bottom: 8px solid #f7f7f7;
   text-align: center;
   line-height: 0.6;
 }
 
-.sidebar-contents{
+.sidebar-contents {
   padding: 50px 0;
 }
 
 .popular-text,
-.categories-text{
- padding-bottom: 5px;
- border-bottom: 1px solid #f7f7f7;
- maegin-bottom:5px;
+.categories-text {
+  padding-bottom: 5px;
+  border-bottom: 1px solid #f7f7f7;
+  margin-bottom: 5px;
 }
 
 .popular-text:last-child,
@@ -189,7 +190,7 @@ main{
 }
 
 .instagram-box:nth-child(odd) {
-  margin: 0 10px 10px 0;
+  margin-right: 10px;
 }
 
 .instagram-box:nth-child(1) {
@@ -228,25 +229,71 @@ footer {
   color: #fff;
 }
 
-/* すべての画面サイズで適用される設定 */
-.social i {
-  color:black;
-}
-/* タブレット横置きサイズ（1024px）以下の際に適用される設定 */
-@media screen and (max-width:1024px) {
-  .social i {
-    color: green;
+@media screen and (max-width: 425px) {
+  header {
+    width: 100%;
   }
-}
-/* タブレット縦置きサイズ（768px）以下の際に適用される設定 */
-@media screen and (max-width:768px) {
-  .social i {
-    color: red;
+
+  .nav-list {
+    width: 100%;
   }
-}
-/* スマートフォンサイズ（425px）以下の際に適用される設定 */
-@media screen and (max-width:425px) {
-  .social i {
-    color: blue;
+
+  .nav-list-item {
+    width: 100%;
+    margin: 0 0 10px 0;
+  }
+
+  .social {
+    display: none;
+  }
+
+  .main-visual-content {
+    width: 100%;
+  }
+
+  main {
+    width: 100%;
+    display: block;
+  }
+
+  .blog {
+    width: 100%;
+    margin: 0;
+  }
+
+  .blog-box {
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+
+  .blog-image {
+    width: 49%;
+  }
+
+  .blog-text {
+    width: 49%;
+    padding-top: 5px;
+  }
+
+  .sidebar {
+    width: 100%;
+  }
+
+  .sidebar-contents {
+    padding-left: 3%;
+    padding-right: 3%;
+  }
+
+  .instagram-box {
+    width: 48%;
+    padding-top: 48%;
+  }
+
+  .instagram-box:nth-child(odd) {
+    margin-right: 4%;
+  }
+
+  .pagination {
+    margin-bottom: 50px;
   }
 }
